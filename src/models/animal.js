@@ -2,19 +2,23 @@ const mongoose = require("mongoose"); // importando el componente mogoose
 const animalSchema = mongoose.Schema({
     nombre: {
         type: String,
-        required: true,
+        required: true
     },
     edad: {
         type: Number,
-        required: true,
+        required: true
     },
     tipo: {
         type: String,
-        required: true,
+        required: true
     },
     fecha: {
         type: Date,
-        requiered: true,
+        required: true
+    },
+    codigo: {
+        type: String,
+        required: true
     }
 });
 module.exports = mongoose.model("Animal", animalSchema);
