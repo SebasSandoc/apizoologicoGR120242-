@@ -5,7 +5,9 @@ const verifyToken = require('./validate_token');
 
 //Nuevo animal
 router.post("/animals", (req, res) => {
+    console.log(req.body);
     const animal = animalSchema(req.body);
+
     animal
         .save()
         .then((data) => res.json(data))
